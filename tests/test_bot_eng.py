@@ -2,11 +2,10 @@ import unittest
 from unittest.mock import patch, MagicMock
 import sys
 from pathlib import Path
-
 # Добавление пути к папке с ботами в sys.path для доступа к модулям бота
 sys.path.append(str(Path(__file__).parent.parent / 'bots'))
-
 from bot_eng import echo, start
+
 
 class TestBotEng(unittest.TestCase):
     def setUp(self):
@@ -29,6 +28,7 @@ class TestBotEng(unittest.TestCase):
         start(self.update, self.context)
         # Проверка, что reply_text был вызван с ожидаемым приветствием
         self.update.message.reply_text.assert_called_once_with('Hi! I am your chat-bot :)')
+
 
 if __name__ == '__main__':
     unittest.main()
