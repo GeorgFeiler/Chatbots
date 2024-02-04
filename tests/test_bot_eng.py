@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 # Добавление пути к папке с ботами в sys.path для доступа к модулям бота
 sys.path.append(str(Path(__file__).parent.parent / 'bots'))
-from bot_eng import echo, start
+from bot_eng import echo, start  # noqa: E402
 
 
 class TestBotEng(unittest.TestCase):
