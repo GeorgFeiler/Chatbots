@@ -1,0 +1,4 @@
+python-telegram-bot==13.13
+transformers==4.37.2
+torch==2.2.0
+flake8==7.0.0
